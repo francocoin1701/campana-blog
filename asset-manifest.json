@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/campana-blog/static/css/main.3eb15723.css",
+    "main.js": "/campana-blog/static/js/main.ddcdded3.js",
+    "static/js/453.c04f9e6d.chunk.js": "/campana-blog/static/js/453.c04f9e6d.chunk.js",
+    "static/media/video2.mp4": "/campana-blog/static/media/video2.9276db935ec234560a9f.mp4",
+    "static/media/video1.mp4": "/campana-blog/static/media/video1.7db46da12036816a3351.mp4",
+    "static/media/foto6.jpeg": "/campana-blog/static/media/foto6.810952f664ccf590db91.jpeg",
+    "static/media/foto2.jpeg": "/campana-blog/static/media/foto2.336bced3d67d6a1d9b5e.jpeg",
+    "static/media/foto1.jpeg": "/campana-blog/static/media/foto1.c7d5a822147686367856.jpeg",
+    "static/media/foto5.jpeg": "/campana-blog/static/media/foto5.ebe7c41af4b7bf176000.jpeg",
+    "static/media/foto3.jpeg": "/campana-blog/static/media/foto3.cefc5e5b5b5495b55fac.jpeg",
+    "static/media/foto4.jpeg": "/campana-blog/static/media/foto4.6cbbb7a4294d5655e749.jpeg",
+    "index.html": "/campana-blog/index.html",
+    "main.3eb15723.css.map": "/campana-blog/static/css/main.3eb15723.css.map",
+    "main.ddcdded3.js.map": "/campana-blog/static/js/main.ddcdded3.js.map",
+    "453.c04f9e6d.chunk.js.map": "/campana-blog/static/js/453.c04f9e6d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3eb15723.css",
+    "static/js/main.ddcdded3.js"
+  ]
+}
