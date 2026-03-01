@@ -1,10 +1,10 @@
 // src/App.js
 import React from 'react';
 import './App.css';
-
 import Hero from './components/Hero'; 
 import Gallery from './components/Gallery'; 
-import VideoSection from './components/VideoSection'; // <-- 1. Importa la sección de videos
+import VideoSection from './components/VideoSection';
+import Footer from './components/Footer'; // <-- 1. Importar Footer
 
 function App() {
   return (
@@ -12,8 +12,9 @@ function App() {
       <main>
         <Hero />
         <Gallery />
-        <VideoSection /> {/* <-- 2. Agrégalo aquí */}
+        <VideoSection />
       </main>
+      <Footer /> {/* <-- 2. Agregar Footer aquí */}
     </div>
   );
 }
