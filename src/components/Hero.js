@@ -13,7 +13,7 @@ const Hero = () => {
         
         {/* Este es el párrafo que da contexto. ¡Recuerda cambiar los datos! */}
         <p>
-          El pasado [PONER LA FECHA AQUÍ], la comunidad de [PONER EL LUGAR AQUÍ] se unió con un solo propósito: demostrar que juntos somos imparables. Esta es la crónica de un día donde los líderes y la gente tomaron la palabra.
+          El pasado [28 de febrero], la comunidad de [Nucuuca] se unió con un solo propósito: demostrar que juntos somos imparables. Esta es la crónica de un día donde los líderes y la gente tomaron la palabra.
         </p>
       </div>
     </section>
