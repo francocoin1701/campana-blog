@@ -1,38 +1,40 @@
+/*
+  ==============================================
+  ARCHIVO DE ESTILOS DE APP: src/App.css
+  ==============================================
+  Este archivo contiene los estilos para el componente
+  principal App.js. Su objetivo es definir la
+  estructura general de la página.
+*/
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  /*
+    Usamos Flexbox para crear un layout de columna.
+    Esto nos permite apilar nuestras secciones (Hero, Gallery, etc.)
+    y el futuro Footer una encima de la otra.
+  */
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+  /*
+    Con 'min-height: 100vh', nos aseguramos de que el contenedor
+    principal .App ocupe, como mínimo, el 100% de la altura
+    de la ventana del navegador.
+    
+    Esto es CLAVE para evitar que el footer "flote" en medio de
+    la página si el contenido es corto.
+  */
+  min-height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+main {
+  /*
+    La etiqueta <main> contendrá todas nuestras secciones de contenido.
+    Al darle 'flex-grow: 1', le decimos que "crezca" y ocupe todo
+    el espacio vertical disponible que sobre.
+    
+    Esto empuja al Footer (que no tendrá esta propiedad)
+    hacia la parte inferior de la página.
+  */
+  flex-grow: 1;
 }

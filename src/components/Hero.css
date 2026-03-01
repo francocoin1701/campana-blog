@@ -1,0 +1,55 @@
+/* src/components/Hero.css */
+
+.hero-container {
+  /* ¡Aquí está la magia! Un degradado en diagonal que mezcla el azul y el rojo de la campaña */
+  background: linear-gradient(135deg, var(--azul-primario) 30%, var(--rojo-acento) 100%);
+  
+  text-align: center;
+  padding: 120px 20px; /* Le di un poco más de espacio arriba y abajo para que respire */
+  
+  /* Cambiamos el borde inferior a un color oscuro para que contraste con el rojo del final del degradado */
+  border-bottom: 8px solid var(--texto-oscuro); 
+}
+
+.hero-content h1 {
+  font-family: var(--font-titulos);
+  
+  /* Ahora el título es blanco para que contraste con el fondo oscuro */
+  color: var(--blanco-base); 
+  
+  font-size: 4rem;
+  margin: 0 0 20px 0;
+  line-height: 1.1;
+  
+  /* Le añadimos una sombra sutil al texto para que tenga relieve y se lea mejor */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); 
+}
+
+.hero-content p {
+  font-family: var(--font-textos);
+  font-size: 1.3rem;
+  line-height: 1.6;
+  max-width: 750px;
+  margin: 0 auto;
+  
+  /* Un blanco un poquito más suave para el párrafo, así no cansa la vista */
+  color: #f4f4f4; 
+  
+  /* Sombra más suave para el texto pequeño */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); 
+}
+
+/* Ajustes para pantallas más pequeñas (teléfonos móviles) */
+@media (max-width: 768px) {
+  .hero-container {
+    padding: 80px 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.8rem;
+  }
+
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+}

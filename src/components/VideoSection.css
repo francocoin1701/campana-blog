@@ -1,0 +1,72 @@
+/* src/components/VideoSection.css */
+
+.video-section {
+  padding: 80px 20px;
+  text-align: center;
+  
+  /* --- EL NUEVO FONDO ROJO DIFUMINADO --- */
+  /* Va desde el rojo vibrante de la campaña hasta un rojo vino oscuro y elegante */
+  background: linear-gradient(135deg, var(--rojo-acento) 0%, #7A0D15 100%);
+  
+  /* Le agregamos una sombra interna arriba y abajo para que la transición 
+     desde el azul oscuro de la galería se vea espectacular y profunda */
+  box-shadow: inset 0 10px 20px rgba(0, 0, 0, 0.2), inset 0 -10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.video-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.video-subtitle {
+  font-size: 1.2rem;
+  /* El subtítulo ahora es blanco con un poquito de transparencia para que se lea perfecto sobre el rojo */
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 50px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+/* Contenedor del video local */
+.video-wrapper {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  /* Sombra más fuerte para que los videos "floten" sobre el fondo rojo */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+  background-color: #000; 
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  min-height: 250px; 
+}
+
+/* El elemento <video> en sí */
+.local-video {
+  width: 100%;
+  height: auto;
+  display: block;
+  outline: none;
+}
+
+/* --- CLASE MÁGICA PARA GIRAR EL VIDEO 2 --- */
+.video-girado {
+  transform: rotate(-90deg);
+  transform-origin: center center;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+/* Ajustes para celulares */
+@media (max-width: 768px) {
+  .video-section {
+    padding: 60px 15px;
+  }
+}

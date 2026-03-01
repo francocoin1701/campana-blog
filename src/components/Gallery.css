@@ -1,0 +1,95 @@
+/* src/components/Gallery.css */
+
+.gallery-section {
+  padding: 80px 20px;
+  background-color: transparent; /* <-- Esto es lo que cambiamos */
+  text-align: center;
+}
+
+.gallery-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.gallery-subtitle {
+  font-size: 1.2rem;
+  /* Cambiamos el color a un gris clarito/azulado para que se lea perfecto */
+  color: #A0ABC0; 
+  margin-bottom: 50px;
+}
+
+/* --- MAGIA RESPONSIVE --- */
+.gallery-grid {
+  display: grid;
+  /* Esto hace que las columnas se adapten solas: en celular 1, en tablet 2, en PC 3 */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  aspect-ratio: 4 / 3; /* Hace que todas las fotos sean rectángulos perfectos y uniformes */
+}
+
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Recorta la imagen sin deformarla para llenar el espacio */
+  transition: transform 0.4s ease; /* Transición suave para el zoom */
+}
+
+/* Efecto al pasar el mouse por encima (Solo en PC) */
+.gallery-item:hover .gallery-image {
+  transform: scale(1.1); /* Zoom a la foto */
+}
+
+.gallery-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* Degradado azul oscuro de la campaña que va de sólido a transparente hacia arriba */
+  background: linear-gradient(to top, rgba(42, 58, 141, 0.95) 0%, rgba(42, 58, 141, 0) 100%);
+  padding: 20px;
+  text-align: left;
+  opacity: 0; /* Oculto por defecto en PC */
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1; /* Muestra el texto al pasar el mouse */
+}
+
+.gallery-overlay h3 {
+  margin: 0;
+  font-family: var(--font-textos);
+  font-size: 1.2rem;
+  color: var(--blanco-base);
+  text-transform: none; /* Quitamos las mayúsculas para que sea más amigable */
+}
+
+/* --- AJUSTES ESPECÍFICOS PARA CELULARES --- */
+@media (max-width: 768px) {
+  .gallery-section {
+    padding: 50px 15px;
+  }
+  
+  .gallery-section h2 {
+    font-size: 2rem;
+  }
+  
+  /* En celular no hay "hover" (no hay mouse para pasar por encima), 
+     así que hacemos que el texto y el degradado oscuro se vean SIEMPRE */
+  .gallery-overlay {
+    opacity: 1; 
+    background: linear-gradient(to top, rgba(42, 58, 141, 0.8) 0%, rgba(42, 58, 141, 0) 100%);
+  }
+}
